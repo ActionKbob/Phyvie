@@ -1,0 +1,27 @@
+[
+    { 
+    	"id" : "type1", 
+    	"displayText" : "Type One",
+    	"subraces" : [
+    		{ 
+    			"id" : "standard",
+    			"displayText" : "Standard"
+    		},
+
+    		{ 
+    			"id" : "variant",
+    			"displayText" : "Variant"
+    		}
+    	]
+    },
+
+    { 
+    	"id" : "type2", 
+    	"displayText" : "Type Two" 
+    },
+
+    { 
+    	"id" : "type3", 
+    	"displayText" : "Type Three" 
+    }
+]
