@@ -1,8 +1,44 @@
 [
     { 
-    	"id" : "type1", 
-    	"displayText" : "Type One",
+    	"id" : "human", 
+    	"displayText" : "Human",
     	"subraces" : [
+    		{ 
+    			"id" : "arkaiun",
+    			"displayText" : "Arkaiun"
+    		},
+
+    		{ 
+    			"id" : "bedine",
+    			"displayText" : "Bedine"
+    		},
+
+    		{ 
+    			"id" : "calishite",
+    			"displayText" : "Calishite"
+    		},
+
+    		{ 
+    			"id" : "chondathan",
+    			"displayText" : "Chondathan"
+    		},
+
+    		{ 
+    			"id" : "damaran",
+    			"displayText" : "Damaran"
+    		},
+
+    		{ 
+    			"id" : "ffolk",
+    			"displayText" : "Ffolk"
+    		},
+
+    		{ 
+    			"id" : "gur",
+    			"displayText" : "Gur"
+    		}
+    	],
+    	"variants" : [
     		{ 
     			"id" : "standard",
     			"displayText" : "Standard"
@@ -16,12 +52,12 @@
     },
 
     { 
-    	"id" : "type2", 
-    	"displayText" : "Type Two" 
+    	"id" : "elf", 
+    	"displayText" : "Elf" 
     },
 
     { 
-    	"id" : "type3", 
-    	"displayText" : "Type Three" 
+    	"id" : "dwarf", 
+    	"displayText" : "Dwarf" 
     }
 ]

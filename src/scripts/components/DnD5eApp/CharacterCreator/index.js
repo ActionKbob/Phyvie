@@ -15,7 +15,15 @@ export default class CharacterCreator extends React.Component
 
 		this.state = {
 			view : 'race',
-			character_data : {}
+			character_data : {
+				selections : {
+					race : {},
+					background : {},
+					class : {},
+
+
+				}
+			}
 		}
 	}
 
