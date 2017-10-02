@@ -19,8 +19,11 @@ module.exports = {
 		loaders : [
 			{ 
 				test : /\.jsx?$/, 
-				loader : 'babel-loader', 
-				exclude : /node_modules/ 
+				loader : 'babel-loader',
+				query : {
+		          plugins: [ 'transform-decorators-legacy' ]
+		        },
+				exclude : /node_modules/
 			},
 			{
 				test : /\.json$/,
