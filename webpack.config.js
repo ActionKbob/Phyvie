@@ -20,9 +20,6 @@ module.exports = {
 			{ 
 				test : /\.jsx?$/, 
 				loader : 'babel-loader',
-				query : {
-		          plugins: [ 'transform-decorators-legacy' ]
-		        },
 				exclude : /node_modules/
 			},
 			{
@@ -34,6 +31,10 @@ module.exports = {
 	},
 
 	resolve : {
+		modules: [
+			path.resolve( './node_modules' ),
+			path.resolve( './src/scripts' )
+		],
 		extensions: [ '.js', '.jsx', '.json' ]
 	},
 

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import dnd5e from './dnd5eReducer';
-import character from './characterReducer';
+import application from 'reducers/ApplicationViewReducer';
+import characterSheet from 'reducers/CharacterSheetReducer';
 
 export default combineReducers({
-	dnd5e,
-	character,
+	application,
+	characterSheet
 });
