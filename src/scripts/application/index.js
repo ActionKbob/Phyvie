@@ -3,13 +3,9 @@ import { connect } from 'react-redux';
 
 // Components
 import Header from './Header';
-import CharacterSheet from './CharacterSheet';
+import CharacterCreator from 'application/CharacterCreator';
 
-@connect( ( store ) => {
-	return {
-		viewID : store.application.view
-	}
-} )
+@connect()
 export default class Application extends React.Component
 {
 	componentWillMount() {
@@ -18,16 +14,6 @@ export default class Application extends React.Component
 
 	render()
 	{
-		const { viewID } = this.props;
-
-		var view;
-		switch( viewID )
-		{
-			case 'character_sheet':
-				view = <CharacterSheet />;
-				break;
-		}
-
 		var styles = {
 			display : 'flex',
 			flexDirection : 'column',
@@ -37,7 +23,7 @@ export default class Application extends React.Component
 		return (
 			<div style={ styles }>
 				<Header />
-				{ view }
+				<CharacterCreator />
 			</div>
 		);
 	}

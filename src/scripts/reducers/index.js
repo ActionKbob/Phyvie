@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
 import application from 'reducers/ApplicationViewReducer';
-import characterSheet from 'reducers/CharacterSheetReducer';
+import character from 'reducers/character';
 
 export default combineReducers({
 	application,
-	characterSheet
+	character
 });
