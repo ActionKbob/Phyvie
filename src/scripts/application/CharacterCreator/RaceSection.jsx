@@ -21,7 +21,7 @@ export default class RaceSection extends React.Component
 		return(
 			<div>
 				<SelectionContainer options={ race.options } 
-									onSelection={ this.onRaceSelect.bind( this ) } />		
+									onSelection={ ( _key ) => this.props.dispatch( setBaseRace( _key ) ) } />
 			</div>
 		);
 	}
@@ -31,14 +31,20 @@ export default class RaceSection extends React.Component
 		var { raceSelection } = this.props;
 		if( raceSelection.selection !== undefined )
 		{
-			var options = race.options.find( x => x.key === raceSelection.selection.key ).subraces;
-			options = ( options !== undefined ) ? options : [];
-			return(
-				<div>
-					<SelectionContainer options={ options } 
-										onSelection={ this.onSubraceSelect.bind( this ) }/>		
-				</div>
-			);
+			try
+			{
+				var options = race.options.find( x => x.key === raceSelection.selection.race.key ).subraces.options;
+				return(
+					<div>
+						<SelectionContainer options={ options }
+											onSelection={ ( _key ) => this.props.dispatch( setSubrace( _key ) ) }/>
+					</div>
+				);
+			}
+			catch( e )
+			{
+				return( '' );
+			}
 		}
 		return false;
 	}
@@ -48,38 +54,26 @@ export default class RaceSection extends React.Component
 		var { raceSelection } = this.props;
 		if( raceSelection.selection !== undefined )
 		{
-			var options = race.options.find( x => x.key === raceSelection.selection.key ).variants;
-			options = ( options !== undefined ) ? options : [];
-			return(
-				<div>
-					<SelectionContainer options={ options } 
-										onSelection={ this.onVariantSelect.bind( this ) }/>
-				</div>
-			);
+			try
+			{
+				var options = race.options.find( x => x.key === raceSelection.selection.race.key ).variants.options;
+				return(
+					<div>
+						<SelectionContainer options={ options } 
+											onSelection={ ( _key ) => this.props.dispatch( setVariantRace( _key ) ) }/>
+					</div>
+				);
+			}
+			catch( e )
+			{
+				return( '' );
+			}
 		}
 		return false;
 	}
 	
-	onRaceSelect( _key )
-	{
-
-	}
-
-	onSubraceSelect( _key )
-	{
-
-	}
-
-	onVariantSelect( _key )
-	{
-
-	}
-
 	render()
 	{
-		console.log('selection');
-		console.log( this.props.raceSelection );
-
 		return(
 			<div>
 				{ this.renderRaceSelection() }

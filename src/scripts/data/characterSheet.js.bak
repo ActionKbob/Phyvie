@@ -1,0 +1,232 @@
+module.exports = {
+
+	values : {
+		characterName : 'Test Nameington',
+		playerName : 'Kbob'
+	},
+
+	selections : [
+		{ 
+			key : 'race',
+			option : {
+				key : 'human',
+				selections : [
+					{
+						key : 'subrace',
+						option : {
+							key : 'arkaiun'
+						}
+					},
+					{
+						key : 'variant',
+						option : {
+							key : 'variant-human',
+							selections : [
+								{ 
+									key : 'ability-score-improvement',
+									options : [
+										{
+											key : 'wis'
+										},
+										{
+											key : 'dex'
+										}
+									]
+								},
+								{
+									key : 'skill-proficiency',
+									options : [
+										{
+											key : 'nature'
+										}
+									]
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+
+		{ 
+			key : 'class',
+			options : [
+				{
+					key : 'barbarian',
+					selections : [
+						{
+							key : 'levels',
+							options : [
+								{ key : 'level', value : 1 }
+							]
+						}
+					]
+				}
+			]
+		},
+
+		{
+			key : 'ability-scores',
+			option : {
+				key : 'standard-scores',
+				selections : [
+					{ key : 'str', value : 16 },
+					{ key : 'dex', value : 14 },
+					{ key : 'con', value : 12 },
+					{ key : 'int', value : 10 },
+					{ key : 'wis', value : 8 },
+					{ key : 'cha', value : 6 }
+				]
+			}
+		},
+
+		{
+			key : 'alignment',
+			options : {
+				key : 'neutral'
+			}
+		},
+
+		{
+			key : 'background',
+			option : {
+				key : 'entertainer',
+				selections : [
+					{
+						key : 'tool-proficiency-musical-instruments',
+						option : {
+							key : 'dulcimer'
+						}
+					},
+					{
+						key : 'starting-equipment-musical-instrument',
+						option : {
+							key : 'dulcimer'
+						}
+					}
+				]
+			}
+
+		},
+
+		{
+			key : 'equipment',
+			options : [
+				{
+					key : 'costume',
+					map_value : {
+						quantity : 1,
+						equipped : true,
+						background_starting_equipment : true
+					}
+				},
+				{
+					key : 'pouch',
+					map_value : {
+						quantity : 1,
+						equipped : true,
+						background_starting_equipment : true
+					}
+				}
+			]
+		},
+
+		{
+			key : 'treasure',
+			options : [
+				{
+					key : 'gp',
+					map_value : {
+						quantity : 15,
+						background_starting_equipment : true
+					}
+				}
+			]
+		},
+
+		{
+			key : 'feats',
+			options : [
+				{
+					key : 'martial-adept',
+					selections : [
+						{
+							key : 'martial-maneuvers',
+							options : [
+								{
+									key : 'disarming-attack'
+								},
+								{
+									key : 'disarming-rally'
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+
+		{
+			key : 'class',
+			options : [
+				{
+					key : 'bard',
+					selections : [
+						{
+							key : 'levels',
+							options : [
+								{
+									key : 1
+								}
+							]
+						},
+						{
+							key : 'bard-cantrips-known',
+							options : [
+								{
+									key : 'blade-ward'
+								},
+								{
+									key : 'minor-illusion'
+								}
+							]
+						},
+						{
+							key : 'bard-spells-known',
+							options : [
+								{
+									key : 'charm-person'
+								},
+								{
+									key : 'sleep'
+								},
+								{
+									key : 'heroism'
+								},
+								{
+									key : 'bane'
+								}
+							]
+						},
+						{
+							key : 'skill-proficiency',
+							options : [
+								{
+									key : 'medicine'
+								},
+								{
+									key : 'animal-handling'
+								},
+								{
+									key : 'arcana'
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+
+
+}
