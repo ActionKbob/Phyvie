@@ -1,11 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import rules from 'data/rules';
 
 // Components
-import Nav from 'application/CharacterCreator/Nav';
-import RaceSection from 'application/CharacterCreator/RaceSection';
-import ClassSection from 'application/CharacterCreator/ClassSelection';
-
+import RaceSelection from 'application/CharacterCreator/RaceSelection';
 
 @connect( ( store ) => {
 	return {
@@ -23,28 +21,22 @@ export default class CharacterCreator extends React.Component
 
 	handleChangeView( _view )
 	{
+		
 		this.setState( { view : _view } );
 	}
 
 	render()
 	{
 
-		const { character } = this.props;
+		var { character } = this.props;
 
-		console.clear()
+		console.clear();
+		//console.debug( JSON.stringify( rules, true, 2 ) );
 		console.debug( JSON.stringify( character, true, 2 ) );
-
-		var view = <RaceSection />;
-		switch( this.state.view )
-		{
-			case 'class':
-				view = <ClassSection />;
-		}
 
 		return(
 			<div>
-				<Nav onViewSelect={ this.handleChangeView.bind( this ) } />
-				{ view }
+				<RaceSelection />
 			</div>
 		);
 	}

@@ -1,24 +1,25 @@
-export function setBaseRace( _val )
+import enums from 'data/enums';
+
+export function addRace( _value )
 {
 	return {
-		type : 'CHARACTER_RACE_SET_BASE',
-		payload : _val
+		type : enums.ADD_RACE,
+		payload : _value
 	}
 }
 
-export function setSubrace( _val )
+export function addSubrace( _value )
 {
 	return {
-		type : 'CHARACTER_RACE_SET_SUBRACE',
-		payload : _val
+		type : enums.ADD_SUBRACE,
+		payload : _value
 	}
 }
 
-
-export function setVariantRace( _val )
+export function addVariant( _value )
 {
 	return {
-		type : 'CHARACTER_RACE_SET_VARIANT',
-		payload : _val
+		type : enums.ADD_VARIANT,
+		payload : _value
 	}
 }

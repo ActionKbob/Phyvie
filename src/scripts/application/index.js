@@ -19,7 +19,7 @@ export default class Application extends React.Component
 			flexDirection : 'column',
 			height : '100vh'
 		}
-
+		
 		return (
 			<div style={ styles }>
 				<Header />

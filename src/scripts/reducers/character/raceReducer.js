@@ -1,47 +1,33 @@
-import { race } from 'data/rules';
+import { combineReducers } from 'redux';
+import enums from 'data/enums';
 
-export default function reducer( state = {}, action )
-{
-
-	switch( action.type )
+const byId = ( state = {}, action ) => {
+	const { type, payload } = action;
+	switch( type )
 	{
-		case 'CHARACTER_RACE_SET_BASE':
-			var d = race.options.find( x => x.key === action.payload );
-			return { 
-				...state, selection : { 
-					race : { 
-						key : d.key, 
-						properties : d.properties
-					}
-				} 
+		case enums.ADD_RACE:
+			return {
+				...state,
+				'race' : payload,
+				subrace : undefined,
+				variant : undefined
 			};
 
-		case 'CHARACTER_RACE_SET_SUBRACE':
-			var d = race.options.find( x => x.key === state.selection.race.key ).subraces.options.find( x => x.key === action.payload );
-			return { 
-				...state, 
-				selection : { 
-					...state.selection, 
-					subrace : {
-						key : d.key,
-						properties : d.properties
-					}
-				} 
+		case enums.ADD_SUBRACE:
+			return {
+				...state,
+				'subrace' : payload
 			};
 
-		case 'CHARACTER_RACE_SET_VARIANT':
-			var d = race.options.find( x => x.key === state.selection.race.key ).variants.options.find( x => x.key === action.payload );
-			return { 
-				...state, 
-				selection : { 
-					...state.selection,
-					variant : {
-						key : d.key,
-						properties : d.properties
-					}
-				} 
+		case enums.ADD_VARIANT:
+			return {
+				...state,
+				'variant' : payload
 			};
 	}
-
 	return state;
 }
+
+const raceReducer = combineReducers( { byId } );
+
+export default raceReducer;

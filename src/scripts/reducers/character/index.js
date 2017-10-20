@@ -1,9 +1,5 @@
 import { combineReducers } from 'redux';
 
-import race from 'reducers/character/raceReducer';
-import classes from 'reducers/character/classReducer';
+import races from 'reducers/character/raceReducer';
 
-export default combineReducers({
-	race,
-	classes
-});
+export default combineReducers( { races } );

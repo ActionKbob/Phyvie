@@ -1,7 +1,7 @@
-import race from 'data/rules/race';
-import classes from 'data/rules/classes';
+import races from 'data/rules/races';
+import subraces from 'data/rules/subraces';
 
 module.exports = {
-	race : race,
-	classes : classes
+	races : races,
+	subraces : subraces
 }

@@ -1,4 +1,4 @@
-export function calculateModifier( _value )
+export function calculateModifierString( _value )
 {
 	var mod = Math.floor( ( _value - 10 ) / 2 );
 	var sym = '';
